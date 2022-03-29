@@ -20,7 +20,6 @@ def create_client(url, username, password)
 end
 
 
-# TODO: Add physical_infra_overview_view + all management features for physical_infra
 def create_EvmRole_intersight_user(miq_client)
   string_hash = {
     "action" => "create",
@@ -30,6 +29,7 @@ def create_EvmRole_intersight_user(miq_client)
         "restrictions" => { "vms" => "user" }
       },
       "features" => [
+        { "href" => "http://localhost:3000/api/roles/10/features/1047" },
         { "href" => "http://localhost:3000/api/roles/10/features/1533" },
         { "href" => "http://localhost:3000/api/roles/10/features/1532" },
         { "href" => "http://localhost:3000/api/roles/10/features/1525" },
@@ -117,9 +117,11 @@ def create_EvmRole_intersight_user(miq_client)
     }
   }
   miq_client.connection.post "roles"  do string_hash  end
+
+  puts "Role EvmRole_intersight_user successfully created"
 end
 
-# TODO: Add physical_infra_overview_view feature
+# TODO: Add all management features for physical_infra
 def create_EvmRole_intersight_admin(miq_client)
   string_hash = {
     "action" => "create",
@@ -129,6 +131,7 @@ def create_EvmRole_intersight_admin(miq_client)
         "restrictions" => { "vms" => "user" }
       },
       "features" => [
+        { "href" => "http://localhost:3000/api/roles/10/features/1047" },
         { "href" => "http://localhost:3000/api/roles/10/features/1533" },
         { "href" => "http://localhost:3000/api/roles/10/features/1532" },
         { "href" => "http://localhost:3000/api/roles/10/features/1525" },
@@ -216,6 +219,8 @@ def create_EvmRole_intersight_admin(miq_client)
     }
   }
   miq_client.connection.post "roles"  do string_hash  end
+  
+  puts "Role EvmRole_intersight_admin successfully created"
 end
 
 options = {}
