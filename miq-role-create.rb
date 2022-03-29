@@ -19,7 +19,6 @@ def create_client(url, username, password)
   miq
 end
 
-
 def create_EvmRole_intersight_user(miq_client)
   string_hash = {
     "action" => "create",
@@ -29,7 +28,9 @@ def create_EvmRole_intersight_user(miq_client)
         "restrictions" => { "vms" => "user" }
       },
       "features" => [
+        # physical_infra_overview_view feature
         { "href" => "http://localhost:3000/api/roles/10/features/1047" },
+        # EvmRole-user features
         { "href" => "http://localhost:3000/api/roles/10/features/1533" },
         { "href" => "http://localhost:3000/api/roles/10/features/1532" },
         { "href" => "http://localhost:3000/api/roles/10/features/1525" },
@@ -131,7 +132,25 @@ def create_EvmRole_intersight_admin(miq_client)
         "restrictions" => { "vms" => "user" }
       },
       "features" => [
-        { "href" => "http://localhost:3000/api/roles/10/features/1047" },
+        # management features for physical_infra
+        # physical_infra_overview
+        { "href" => "http://localhost:3000/api/roles/10/features/1046" },
+        # ems_physical_infra
+        { "href" => "http://localhost:3000/api/roles/10/features/1374" },
+        # physical_rack
+        { "href" => "http://localhost:3000/api/roles/10/features/1393" },
+        # physical_chassis
+        { "href" => "http://localhost:3000/api/roles/10/features/1399" },
+        # physical_switch
+        { "href" => "http://localhost:3000/api/roles/10/features/1408" },
+        # physical_storage
+        { "href" => "http://localhost:3000/api/roles/10/features/1415" },
+        # physical_server
+        { "href" => "http://localhost:3000/api/roles/10/features/1426" },
+        # firmware
+        { "href" => "http://localhost:3000/api/roles/10/features/1451" },
+
+        # EvmRole-user features
         { "href" => "http://localhost:3000/api/roles/10/features/1533" },
         { "href" => "http://localhost:3000/api/roles/10/features/1532" },
         { "href" => "http://localhost:3000/api/roles/10/features/1525" },
@@ -223,6 +242,16 @@ def create_EvmRole_intersight_admin(miq_client)
   puts "Role EvmRole_intersight_admin successfully created"
 end
 
+def remove_EvmRole_intersight_admin(miq_client)
+  string_hash = {
+    "action" => "delete",
+  }
+  role_id = miq_client.roles.where(:name => "EvmRole-intersight_admin").first["id"]
+  miq_client.connection.post "roles/#{role_id}"  do string_hash  end
+  puts "Role EvmRole_intersight_admin successfully deleted"
+end
+
+
 options = {}
 option_parser =  OptionParser.new do |opt|
   opt.banner = "Usage: #{$0} --username username --password password --url url"
@@ -238,8 +267,7 @@ if options[:username].nil? || options[:password].nil? || options[:url].nil?
   exit 1
 end
 
-puts options
 miq_client=create_client(options[:url], options[:username], options[:password])
 
-create_EvmRole_intersight_admin(miq_client)
 create_EvmRole_intersight_user(miq_client)
+create_EvmRole_intersight_admin(miq_client)
