@@ -19,6 +19,10 @@ def create_client(url, username, password)
   miq
 end
 
+# Create EvmRole-intersight_user
+#
+# @param miq_client client instance
+
 def create_EvmRole_intersight_user(miq_client)
   string_hash = {
     "action" => "create",
@@ -207,7 +211,10 @@ def create_EvmRole_intersight_user(miq_client)
   puts "Role EvmRole_intersight_user successfully created"
 end
 
-# TODO: Add all management features for physical_infra
+# Create EvmRole-intersight_admin
+#
+# @param miq_client client instance
+
 def create_EvmRole_intersight_admin(miq_client)
   string_hash = {
     "action" => "create",
@@ -388,7 +395,7 @@ def create_EvmRole_intersight_admin(miq_client)
   puts "Role EvmRole_intersight_admin successfully created"
 end
 
-# This is for testing purposes
+# Remove methods are just for easier development purposes
 def remove_EvmRole_intersight_admin(miq_client)
   string_hash = {
     "action" => "delete",
