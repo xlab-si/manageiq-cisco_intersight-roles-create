@@ -24,6 +24,11 @@ end
 
 def create_intersight_user(miq_client, url)
 
+  user_data = {
+    "username" => "intersight_user",
+    "password" => "test123"
+  }
+
   # EvmRole-intersight_user is created here
   string_hash = {
     "action" => "create",
@@ -225,8 +230,8 @@ def create_intersight_user(miq_client, url)
   # EvmUser-intersight_user is created here
   group_id = miq_client.groups.where(:description => "EvmGroup-intersight_user").first["id"]
   string_hash = {
-    "userid" => "intersight_user",
-    "password" => "test123",
+    "userid" => user_data["username"],
+    "password" => user_data["password"],
     "name" => "EvmUser-Intersight_user",
     "group" => {
       "id" => group_id
@@ -243,6 +248,12 @@ end
 # @param url URL to the ManageIQ instance
 
 def create_intersight_admin(miq_client, url)
+
+  admin_data = {
+    "username" => "intersight_admin",
+    "password" => "test123"
+  }
+
   string_hash = {
     "action" => "create",
     "resource" =>  {
@@ -435,8 +446,8 @@ def create_intersight_admin(miq_client, url)
   #EvmUser-intersight_admin is created here
   group_id = miq_client.groups.where(:description => "EvmGroup-intersight_admin").first["id"]
   string_hash = {
-    "userid" => "intersight_admin",
-    "password" => "test123",
+    "userid" => admin_data["username"],
+    "password" => admin_data["password"],
     "name" => "EvmUser-Intersight_admin",
     "group" => {
       "id" => group_id
