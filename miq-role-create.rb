@@ -34,175 +34,175 @@ def create_intersight_user(miq_client, url)
       },
       "features" => [
         # physical_infra_overview_view feature
-        { "href" => "#{url}/features/1047" },
+        { "identifier" => "physical_infra_overview_view" },
         # Blink Loc LED
-        { "href" => "#{url}/features/1442" },
+        { "identifier" => "physical_server_restart_mgmt_controller" },
         # Orders operations
-        { "href" => "#{url}/features/1533" },
+        { "identifier" => "sui_orders" },
         # Display Orders
-        { "href" => "#{url}/features/1532" },
+        { "identifier" => "sui_orders_view" },
         # Edit VM Tags
-        { "href" => "#{url}/features/1525" },
+        { "identifier" => "sui_vm_tags" },
         # Open VMware VMRC Console
-        { "href" => "#{url}/features/1523" },
+        { "identifier" => "sui_vm_vmrc_console" },
         # Open Remote Console
-        { "href" => "#{url}/features/1522" },
+        { "identifier" => "sui_vm_html5_console" },
         # Display VM details
-        { "href" => "#{url}/features/1517" },
+        { "identifier" => "sui_vm_details_view" },
         # View services
-        { "href" => "#{url}/features/1502" },
+        { "identifier" => "sui_services_view" },
         # Display notifications
-        { "href" => "#{url}/features/1495" },
+        { "identifier" => "sui_notifications" },
         # View Physical Infra Topology
-        { "href" => "#{url}/features/1464" },
+        { "identifier" => "physical_infra_topology_view" },
         # View Physical Server
-        { "href" => "#{url}/features/1427" },
+        { "identifier" => "physical_server_view" },
         # View Physical Storage
-        { "href" => "#{url}/features/1416" },
+        { "identifier" => "physical_storage_view" },
         # View Physical Switch
-        { "href" => "#{url}/features/1409" },
+        { "identifier" => "physical_switch_view" },
         # View Physical Chassis
-        { "href" => "#{url}/features/1400" },
+        { "identifier" => "physical_chassis_view" },
         # View Physical Rack
-        { "href" => "#{url}/features/1394" },
+        { "identifier" => "physical_rack_view" },
         # Open a management console
-        { "href" => "#{url}/features/1386" },
+        { "identifier" => "ems_physical_infra_console" },
         # Edit Tags of Physical Infrastructure Providers
-        { "href" => "#{url}/features/1381" },
+        { "identifier" => "ems_physical_infra_tag" },
         # Display Individual Physical Infrastructure Providers
-        { "href" => "#{url}/features/1377" },
+        { "identifier" => "ems_physical_infra_show" },
         # View Event Streams
-        { "href" => "#{url}/features/1479" },
+        { "identifier" => "event_streams_view" },
         # Display List of Physical Infrastructure Providers
-        { "href" => "#{url}/features/1376" },
+        { "identifier" => "ems_physical_infra_show_list" },
         # Everything for Template Snapshots
-        { "href" => "#{url}/features/1292" },
+        { "identifier" => "miq_template_snapshot" },
         # Edit Template Tags
-        { "href" => "#{url}/features/1285" },
+        { "identifier" => "miq_template_tag" },
         # Check Compliance of Last Known Configuration
-        { "href" => "#{url}/features/1280" },
+        { "identifier" => "miq_template_check_compliance" },
         # Display Timelines for Templates
-        { "href" => "#{url}/features/1277" },
+        { "identifier" => "miq_template_timeline" },
         # Show Capacity & Utilization data of Templates
-        { "href" => "#{url}/features/1276" },
+        { "identifier" => "miq_template_perf" },
         # Display Templates Drift
-        { "href" => "#{url}/features/1275" },
+        { "identifier" => "miq_template_drift" },
         # Compare multiple Templates
-        { "href" => "#{url}/features/1274" },
+        { "identifier" => "miq_template_compare" },
         # Display Timelines for Physical Infrastructure Providers
-        { "href" => "#{url}/features/1378" },
+        { "identifier" => "ems_physical_infra_timeline" },
         # Display Lists of Templates related to a CI
-        { "href" => "#{url}/features/1272" },
+        { "identifier" => "miq_template_show_list" },
         # Everything for VM Snapshots
-        { "href" => "#{url}/features/1262" },
+        { "identifier" => "vm_snapshot" },
         # Edit VM Tags
-        { "href" => "#{url}/features/1242" },
+        { "identifier" => "vm_tag" },
         # Open a VMRC console for VMs
-        { "href" => "#{url}/features/1240" },
+        { "identifier" => "vm_vmrc_console" },
         # Open a web-based console for VMs
-        { "href" => "#{url}/features/1239" },
+        { "identifier" => "vm_html5_console" },
         # Check Compliance of Last Known Configuration
-        { "href" => "#{url}/features/1224" },
+        { "identifier" => "vm_check_compliance" },
         # Show Chargeback Preview for a VM
-        { "href" => "#{url}/features/1221" },
+        { "identifier" => "vm_chargeback" },
         # Display Timelines for VMs
-        { "href" => "#{url}/features/1220" },
+        { "identifier" => "vm_timeline" },
         # Show Capacity & Utilization data of VMs
-        { "href" => "#{url}/features/1217" },
+        { "identifier" => "vm_perf" },
         # Display Individual Templates related to a CI
-        { "href" => "#{url}/features/1273" },
+        { "identifier" => "miq_template_show" },
         # Display VMs Drift
-        { "href" => "#{url}/features/1216" },
+        { "identifier" => "vm_drift" },
         # Compare multiple VMs
-        { "href" => "#{url}/features/1215" },
+        { "identifier" => "vm_compare" },
         # Display Individual VMs related to a CI
-        { "href" => "#{url}/features/1214" },
+        { "identifier" => "vm_show" },
         # Display Lists of VMs related to a CI
-        { "href" => "#{url}/features/1210" },
+        { "identifier" => "vm_show_list" },
         # All VM and Instance Access Rules
-        { "href" => "#{url}/features/1134" },
+        { "identifier" => "all_vm_rules" },
         # Show the About Information
-        { "href" => "#{url}/features/716" },
+        { "identifier" => "about" },
         # Display Lists of My Tasks
-        { "href" => "#{url}/features/604" },
+        { "identifier" => "miq_task_my_ui" },
         # Edit Time Profiles
-        { "href" => "#{url}/features/595" },
+        { "identifier" => "my_settings_time_profiles" },
         # Edit Default Views
-        { "href" => "#{url}/features/593" },
+        { "identifier" => "my_settings_default_views" },
         # Edit Visuals
-        { "href" => "#{url}/features/592" },
+        { "identifier" => "my_settings_visuals" },
         # Everything under RSS
-        { "href" => "#{url}/features/406" },
+        { "identifier" => "rss" },
         # Everything under Timelines
-        { "href" => "#{url}/features/402" },
+        { "identifier" => "timeline" },
         # Everything under Reports
-        { "href" => "#{url}/features/384" },
+        { "identifier" => "chargeback_reports" },
         # Everything under Chargeback
-        { "href" => "#{url}/features/383" },
+        { "identifier" => "chargeback" },
         # Schedules Accordion
-        { "href" => "#{url}/features/352" },
+        { "identifier" => "miq_report_schedules" },
         # Run a selected Report
-        { "href" => "#{url}/features/346" },
+        { "identifier" => "miq_report_run" },
         # View Reports
-        { "href" => "#{url}/features/337" },
+        { "identifier" => "miq_report_view" },
         # Saved Reports Accordion
-        { "href" => "#{url}/features/330" },
+        { "identifier" => "miq_report_saved_reports" },
         # Everything under Dashboard
-        { "href" => "#{url}/features/323" },
+        { "identifier" => "dashboard" },
         # Edit Datastore Tags
-        { "href" => "#{url}/features/312" },
+        { "identifier" => "storage_tag" },
         # Show Capacity & Utilization data of Datastores
-        { "href" => "#{url}/features/309" },
+        { "identifier" => "storage_perf" },
         # Display Individual Datastores
-        { "href" => "#{url}/features/308" },
+        { "identifier" => "storage_show" },
         # Display Lists of Datastores
-        { "href" => "#{url}/features/307" },
+        { "identifier" => "storage_show_list" },
         # Edit Tags of Resource Pools
-        { "href" => "#{url}/features/301" },
+        { "identifier" => "resource_pool_tag" },
         # Display Individual Resource Pools
-        { "href" => "#{url}/features/299" },
+        { "identifier" => "resource_pool_show" },
         # Display Lists of Resource Pools
-        { "href" => "#{url}/features/298" },
+        { "identifier" => "resource_pool_view" },
         # Edit Host Tags
-        { "href" => "#{url}/features/278" },
+        { "identifier" => "host_tag" },
         # Display Timelines for Hosts
-        { "href" => "#{url}/features/271" },
+        { "identifier" => "host_timeline" },
         # Show Capacity & Utilization data of Hosts
-        { "href" => "#{url}/features/270" },
+        { "identifier" => "host_perf" },
         # Display Individual Hosts
-        { "href" => "#{url}/features/268" },
+        { "identifier" => "host_show" },
         # Display Lists of Hosts
-        { "href" => "#{url}/features/267" },
+        { "identifier" => "host_show_list" },
         # Edit Tags for Clusters
-        { "href" => "#{url}/features/261" },
+        { "identifier" => "ems_cluster_tag" },
         # Display Timelines for Clusters
-        { "href" => "#{url}/features/257" },
+        { "identifier" => "ems_cluster_timeline" },
         # Show Capacity & Utilization data of Clusters
-        { "href" => "#{url}/features/256" },
+        { "identifier" => "ems_cluster_perf" },
         # Display Individual Clusters
-        { "href" => "#{url}/features/255" },
+        { "identifier" => "ems_cluster_show" },
         # Display Lists of Clusters
-        { "href" => "#{url}/features/254" },
+        { "identifier" => "ems_cluster_show_list" },
         # Edit Tags of Infrastructure Providers
-        { "href" => "#{url}/features/232" },
+        { "identifier" => "ems_infra_tag" },
         # Display Timelines for Infrastructure Providers
-        { "href" => "#{url}/features/229" },
+        { "identifier" => "ems_infra_timeline" },
         # Display Individual Infrastructure Providers
-        { "href" => "#{url}/features/228" },
+        { "identifier" => "ems_infra_show" },
         # Display Lists of Infrastructure Providers
-        { "href" => "#{url}/features/227" },
+        { "identifier" => "ems_infra_show_list" },
         # View Services
-        { "href" => "#{url}/features/87" },
+        { "identifier" => "service_view" },
         # Modify Requests
-        { "href" => "#{url}/features/35" },
+        { "identifier" => "miq_request_admin" },
         # View Requests
-        { "href" => "#{url}/features/29" },
+        { "identifier" => "miq_request_view" },
         # Instance Views
-        { "href" => "#{url}/features/11" },
+        { "identifier" => "vm_cloud_explorer" },
         # Virtual Machine Views
-        { "href" => "#{url}/features/6" },
+        { "identifier" => "vm_infra_explorer" },
         # Workloads Views
-        { "href" => "#{url}/features/2" }
+        { "identifier" => "vm_explorer" }
       ]
     }
   }
@@ -252,168 +252,168 @@ def create_intersight_admin(miq_client, url)
       },
       "features" => [
         # physical_infra_overview
-        { "href" => "#{url}/features/1046" },
+        { "identifier" => "physical_infra_overview" },
         # ems_physical_infra
-        { "href" => "#{url}/features/1374" },
+        { "identifier" => "ems_physical_infra" },
         # physical_rack
-        { "href" => "#{url}/features/1393" },
+        { "identifier" => "physical_rack" },
         # physical_chassis
-        { "href" => "#{url}/features/1399" },
+        { "identifier" => "physical_chassis" },
         # physical_switch
-        { "href" => "#{url}/features/1408" },
+        { "identifier" => "physical_switch" },
         # physical_storage
-        { "href" => "#{url}/features/1415" },
+        { "identifier" => "physical_storage" },
         # physical_server
-        { "href" => "#{url}/features/1426" },
+        { "identifier" => "physical_server" },
         # firmware
-        { "href" => "#{url}/features/1451" },
+        { "identifier" => "firmware" },
         
         # Orders operations
-        { "href" => "#{url}/features/1533" },
+        { "identifier" => "sui_orders" },
         # Display Orders
-        { "href" => "#{url}/features/1532" },
+        { "identifier" => "sui_orders_view" },
         # Edit VM Tags
-        { "href" => "#{url}/features/1525" },
+        { "identifier" => "sui_vm_tags" },
         # Open VMware VMRC Console
-        { "href" => "#{url}/features/1523" },
+        { "identifier" => "sui_vm_vmrc_console" },
         # Open Remote Console
-        { "href" => "#{url}/features/1522" },
+        { "identifier" => "sui_vm_html5_console" },
         # Display VM details
-        { "href" => "#{url}/features/1517" },
+        { "identifier" => "sui_vm_details_view" },
         # View services
-        { "href" => "#{url}/features/1502" },
+        { "identifier" => "sui_services_view" },
         # Display notifications
-        { "href" => "#{url}/features/1495" },
+        { "identifier" => "sui_notifications" },
         # View Physical Infra Topology
-        { "href" => "#{url}/features/1464" },
+        { "identifier" => "physical_infra_topology_view" },
         # View Event Streams
-        { "href" => "#{url}/features/1479" },
+        { "identifier" => "event_streams_view" },
         # Everything for Template Snapshots
-        { "href" => "#{url}/features/1292" },
+        { "identifier" => "miq_template_snapshot" },
         # Edit Template Tags
-        { "href" => "#{url}/features/1285" },
+        { "identifier" => "miq_template_tag" },
         # Check Compliance of Last Known Configuration
-        { "href" => "#{url}/features/1280" },
+        { "identifier" => "miq_template_check_compliance" },
         # Display Timelines for Templates
-        { "href" => "#{url}/features/1277" },
+        { "identifier" => "miq_template_timeline" },
         # Show Capacity & Utilization data of Templates
-        { "href" => "#{url}/features/1276" },
+        { "identifier" => "miq_template_perf" },
         # Display Templates Drift
-        { "href" => "#{url}/features/1275" },
+        { "identifier" => "miq_template_drift" },
         # Compare multiple Templates
-        { "href" => "#{url}/features/1274" },
+        { "identifier" => "miq_template_compare" },
         # Display Lists of Templates related to a CI
-        { "href" => "#{url}/features/1272" },
+        { "identifier" => "miq_template_show_list" },
         # Everything for VM Snapshots
-        { "href" => "#{url}/features/1262" },
+        { "identifier" => "vm_snapshot" },
         # Edit VM Tags
-        { "href" => "#{url}/features/1242" },
+        { "identifier" => "vm_tag" },
         # Open a VMRC console for VMs
-        { "href" => "#{url}/features/1240" },
+        { "identifier" => "vm_vmrc_console" },
         # Open a web-based console for VMs
-        { "href" => "#{url}/features/1239" },
+        { "identifier" => "vm_html5_console" },
         # Check Compliance of Last Known Configuration
-        { "href" => "#{url}/features/1224" },
+        { "identifier" => "vm_check_compliance" },
         # Show Chargeback Preview for a VM
-        { "href" => "#{url}/features/1221" },
+        { "identifier" => "vm_chargeback" },
         # Display Timelines for VMs
-        { "href" => "#{url}/features/1220" },
+        { "identifier" => "vm_timeline" },
         # Show Capacity & Utilization data of VMs
-        { "href" => "#{url}/features/1217" },
+        { "identifier" => "vm_perf" },
         # Display Individual Templates related to a CI
-        { "href" => "#{url}/features/1273" },
+        { "identifier" => "miq_template_show" },
         # Display VMs Drift
-        { "href" => "#{url}/features/1216" },
+        { "identifier" => "vm_drift" },
         # Compare multiple VMs
-        { "href" => "#{url}/features/1215" },
+        { "identifier" => "vm_compare" },
         # Display Individual VMs related to a CI
-        { "href" => "#{url}/features/1214" },
+        { "identifier" => "vm_show" },
         # Display Lists of VMs related to a CI
-        { "href" => "#{url}/features/1210" },
+        { "identifier" => "vm_show_list" },
         # All VM and Instance Access Rules
-        { "href" => "#{url}/features/1134" },
+        { "identifier" => "all_vm_rules" },
         # Show the About Information
-        { "href" => "#{url}/features/716" },
+        { "identifier" => "about" },
         # Display Lists of My Tasks
-        { "href" => "#{url}/features/604" },
+        { "identifier" => "miq_task_my_ui" },
         # Edit Time Profiles
-        { "href" => "#{url}/features/595" },
+        { "identifier" => "my_settings_time_profiles" },
         # Edit Default Views
-        { "href" => "#{url}/features/593" },
+        { "identifier" => "my_settings_default_views" },
         # Edit Visuals
-        { "href" => "#{url}/features/592" },
+        { "identifier" => "my_settings_visuals" },
         # Everything under RSS
-        { "href" => "#{url}/features/406" },
+        { "identifier" => "rss" },
         # Everything under Timelines
-        { "href" => "#{url}/features/402" },
+        { "identifier" => "timeline" },
         # Everything under Reports
-        { "href" => "#{url}/features/384" },
+        { "identifier" => "chargeback_reports" },
         # Everything under Chargeback
-        { "href" => "#{url}/features/383" },
+        { "identifier" => "chargeback" },
         # Schedules Accordion
-        { "href" => "#{url}/features/352" },
+        { "identifier" => "miq_report_schedules" },
         # Run a selected Report
-        { "href" => "#{url}/features/346" },
+        { "identifier" => "miq_report_run" },
         # View Reports
-        { "href" => "#{url}/features/337" },
+        { "identifier" => "miq_report_view" },
         # Saved Reports Accordion
-        { "href" => "#{url}/features/330" },
+        { "identifier" => "miq_report_saved_reports" },
         # Everything under Dashboard
-        { "href" => "#{url}/features/323" },
+        { "identifier" => "dashboard" },
         # Edit Datastore Tags
-        { "href" => "#{url}/features/312" },
+        { "identifier" => "storage_tag" },
         # Show Capacity & Utilization data of Datastores
-        { "href" => "#{url}/features/309" },
+        { "identifier" => "storage_perf" },
         # Display Individual Datastores
-        { "href" => "#{url}/features/308" },
+        { "identifier" => "storage_show" },
         # Display Lists of Datastores
-        { "href" => "#{url}/features/307" },
+        { "identifier" => "storage_show_list" },
         # Edit Tags of Resource Pools
-        { "href" => "#{url}/features/301" },
+        { "identifier" => "resource_pool_tag" },
         # Display Individual Resource Pools
-        { "href" => "#{url}/features/299" },
+        { "identifier" => "resource_pool_show" },
         # Display Lists of Resource Pools
-        { "href" => "#{url}/features/298" },
+        { "identifier" => "resource_pool_view" },
         # Edit Host Tags
-        { "href" => "#{url}/features/278" },
+        { "identifier" => "host_tag" },
         # Display Timelines for Hosts
-        { "href" => "#{url}/features/271" },
+        { "identifier" => "host_timeline" },
         # Show Capacity & Utilization data of Hosts
-        { "href" => "#{url}/features/270" },
+        { "identifier" => "host_perf" },
         # Display Individual Hosts
-        { "href" => "#{url}/features/268" },
+        { "identifier" => "host_show" },
         # Display Lists of Hosts
-        { "href" => "#{url}/features/267" },
+        { "identifier" => "host_show_list" },
         # Edit Tags for Clusters
-        { "href" => "#{url}/features/261" },
+        { "identifier" => "ems_cluster_tag" },
         # Display Timelines for Clusters
-        { "href" => "#{url}/features/257" },
+        { "identifier" => "ems_cluster_timeline" },
         # Show Capacity & Utilization data of Clusters
-        { "href" => "#{url}/features/256" },
+        { "identifier" => "ems_cluster_perf" },
         # Display Individual Clusters
-        { "href" => "#{url}/features/255" },
+        { "identifier" => "ems_cluster_show" },
         # Display Lists of Clusters
-        { "href" => "#{url}/features/254" },
+        { "identifier" => "ems_cluster_show_list" },
         # Edit Tags of Infrastructure Providers
-        { "href" => "#{url}/features/232" },
+        { "identifier" => "ems_infra_tag" },
         # Display Timelines for Infrastructure Providers
-        { "href" => "#{url}/features/229" },
+        { "identifier" => "ems_infra_timeline" },
         # Display Individual Infrastructure Providers
-        { "href" => "#{url}/features/228" },
+        { "identifier" => "ems_infra_show" },
         # Display Lists of Infrastructure Providers
-        { "href" => "#{url}/features/227" },
+        { "identifier" => "ems_infra_show_list" },
         # View Services
-        { "href" => "#{url}/features/87" },
+        { "identifier" => "service_view" },
         # Modify Requests
-        { "href" => "#{url}/features/35" },
+        { "identifier" => "miq_request_admin" },
         # View Requests
-        { "href" => "#{url}/features/29" },
+        { "identifier" => "miq_request_view" },
         # Instance Views
-        { "href" => "#{url}/features/11" },
+        { "identifier" => "vm_cloud_explorer" },
         # Virtual Machine Views
-        { "href" => "#{url}/features/6" },
+        { "identifier" => "vm_infra_explorer" },
         # Workloads Views
-        { "href" => "#{url}/features/2" }
+        { "identifier" => "vm_explorer" }
       ]
     }
   }
