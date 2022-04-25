@@ -37,7 +37,6 @@ def create_intersight_user(miq_client, url)
         { "href" => "#{url}/features/1047" },
         # Blink Loc LED
         { "href" => "#{url}/features/1442" },
-        
         # Orders operations
         { "href" => "#{url}/features/1533" },
         # Display Orders
@@ -218,11 +217,10 @@ def create_intersight_user(miq_client, url)
     "role" => {
       "id" => role_id
     },
-    "tenant" => { "href" => "http://localhost:3000/api/tenants/1" }
+    "tenant" => { "href" => "#{url}/tenants/1" }
   }
   miq_client.connection.post "groups"  do string_hash  end
   puts "Group EvmGroup-intersight_user successfully created"
-
 
   # EvmUser-intersight_user is created here
   group_id = miq_client.groups.where(:description => "EvmGroup-intersight_user").first["id"]
@@ -422,7 +420,6 @@ def create_intersight_admin(miq_client, url)
   miq_client.connection.post "roles"  do string_hash  end
   puts "Role EvmRole_intersight_admin successfully created"
 
-  
   #EvmGroup-intersight_admin is created here
   role_id = miq_client.roles.where(:name => "EvmRole-intersight_admin").first["id"]
   string_hash = {
@@ -430,11 +427,10 @@ def create_intersight_admin(miq_client, url)
     "role" => {
       "id" => role_id
     },
-    "tenant" => { "href" => "http://localhost:3000/api/tenants/1" }
+    "tenant" => { "href" => "#{url}/tenants/1" }
   }
   miq_client.connection.post "groups"  do string_hash  end
   puts "Group EvmGroup_intersight_admin successfully created"
-
 
   #EvmUser-intersight_admin is created here
   group_id = miq_client.groups.where(:description => "EvmGroup-intersight_admin").first["id"]
