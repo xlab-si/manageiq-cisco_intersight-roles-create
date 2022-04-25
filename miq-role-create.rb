@@ -465,4 +465,4 @@ end
 miq_client=create_client(options[:url], options[:username], options[:password])
 
 create_intersight_user(miq_client, options[:url])
-#create_intersight_admin(miq_client, options[:url])
+create_intersight_admin(miq_client, options[:url])
