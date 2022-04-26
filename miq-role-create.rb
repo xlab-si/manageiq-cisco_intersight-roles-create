@@ -167,7 +167,7 @@ def create_intersight_user(miq_client, url)
         # Display Individual Resource Pools
         { "identifier" => "resource_pool_show" },
         # Display Lists of Resource Pools
-        { "identifier" => "resource_pool_view" },
+        { "identifier" => "resource_pool_show_list" },
         # Edit Host Tags
         { "identifier" => "host_tag" },
         # Display Timelines for Hosts
@@ -384,7 +384,7 @@ def create_intersight_admin(miq_client, url)
         # Display Individual Resource Pools
         { "identifier" => "resource_pool_show" },
         # Display Lists of Resource Pools
-        { "identifier" => "resource_pool_view" },
+        { "identifier" => "resource_pool_show_list" },
         # Edit Host Tags
         { "identifier" => "host_tag" },
         # Display Timelines for Hosts
