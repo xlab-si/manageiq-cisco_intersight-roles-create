@@ -1,0 +1,6 @@
+#Ignore html files
+*.html
+*.lock
+*.pdf
+master-local.adoc
+.idea
